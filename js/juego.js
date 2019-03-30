@@ -24,22 +24,44 @@ Podés ver su implementación en la ultima parte de este codigo. */
 function mostrarInstrucciones(instrucciones) {
     //COMPLETAR
     for (let i = 0; i < instrucciones.length; i++) {
-      mostrarInstruccionEnLista(instrucciones[i], 'lista-instrucciones');      
+      mostrarInstruccionEnLista(instrucciones[i], 'lista-instrucciones');
     }
 }
 
 /* COMPLETAR: Crear función que agregue la última dirección al arreglo de movimientos
 y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
 
+function agregaUltimoMovimiento(direccion) {
+  movimientos.push(direccion);
+  actualizarUltimoMovimiento(movimientos[movimientos.length-1]);
+}
+
+// funciones adicionales sugeridas en la consigna
+
+// mostrar los ultimos 5 movimientos
+
+// function mostrar5Ultimos() {
+//   let ultimosCinco = [];
+//   for (let i = movimientos.length-6; i < movimientos.length-1; i++) {
+//     ultimosCinco.push(movimientos[i]);
+//   }
+//   alert('Tus ultimos movimientos fueron ' + ultimosCinco + '.')
+// }
+
+// mostrar todos los movimientos
+
+// function mostrarTodosLosMovimientos() {
+//   alert('Tus movimientos fueron estos: ' + movimientos)
+// }
+
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora. 
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
-    //COMPLETAR
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
-    //COMPLETAR
+    alert('Biennnn! Ganaste!');
 }
 
 /* Función que intercambia dos posiciones en la grilla.
