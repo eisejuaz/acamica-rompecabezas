@@ -93,6 +93,7 @@ Se te ocurre cómo solucionar esto con una variable temporal?
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
   //COMPLETAR
     var valorAuxiliar = grilla[filaPos1][columnaPos1];
+    
     grilla[filaPos1][columnaPos1] = grilla[filaPos2][columnaPos2];
     grilla[filaPos2][columnaPos2] = valorAuxiliar;
 }
@@ -133,15 +134,15 @@ function moverEnDireccion(direccion) {
   // Mueve pieza hacia la derecha, reemplazandola con la blanca
   else if (direccion === codigosDireccion.DERECHA) {
     //COMPLETAR
+    nuevaFilaPiezaVacia = filaVacia;
     nuevaColumnaPiezaVacia = columnaVacia - 1;
-    nuevaFilaPiezaVacia = filaVacia;    
   }
     
   // Mueve pieza hacia la izquierda, reemplazandola con la blanca
   else if (direccion === codigosDireccion.IZQUIERDA) {
     // COMPLETAR
-    nuevaColumnaPiezaVacia = columnaVacia + 1;
     nuevaFilaPiezaVacia = filaVacia;
+    nuevaColumnaPiezaVacia = columnaVacia + 1;
   }
 
   /* A continuación se chequea si la nueva posición es válida, si lo es, se intercambia. 

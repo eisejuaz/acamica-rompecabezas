@@ -56,17 +56,15 @@ li::before {
 #juego div {
   animation: fadein 2s;
   width: 33%;
+  height: 33%;
   float: left;
+  overflow: hidden;
+  border: #000 solid thin;
 }
 
 #resuelto {
-  width: 80%;
+  width: 80%; 
   padding: 3%;
-}
-
-.piezas-tablero {
-  border: #000 solid thin;
-  overflow: hidden;
 }
 
 .piezas-tablero img {
