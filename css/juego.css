@@ -59,7 +59,10 @@ li::before {
   float: left;
 }
 
-#resuelto {width: 100%;}
+#resuelto {
+  width: 80%;
+  padding: 3%;
+}
 
 .piezas-tablero {
   border: #000 solid thin;
