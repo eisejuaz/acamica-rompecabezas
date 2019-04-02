@@ -56,7 +56,7 @@ function agregaUltimoMovimiento(direccion) {
 
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora. 
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
-function chequearSiGano(grilla) {
+function chequearSiGano() {
   var grillaGanadora = [
     [1, 2, 3],
     [4, 5, 6],
@@ -99,7 +99,11 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
-    //COMPLETAR
+  filaVacia = nuevaFila;
+  console.log('la fila vacia es ' + filaVacia);
+  columnaVacia = nuevaColumna;
+  console.log('la columna vacia es ' + columnaVacia);
+  //COMPLETAR
 }
 
 
@@ -129,15 +133,15 @@ function moverEnDireccion(direccion) {
   // Mueve pieza hacia la derecha, reemplazandola con la blanca
   else if (direccion === codigosDireccion.DERECHA) {
     //COMPLETAR
-    nuevaFilaPiezaVacia = filaVacia;
     nuevaColumnaPiezaVacia = columnaVacia - 1;
+    nuevaFilaPiezaVacia = filaVacia;    
   }
     
   // Mueve pieza hacia la izquierda, reemplazandola con la blanca
   else if (direccion === codigosDireccion.IZQUIERDA) {
     // COMPLETAR
-    nuevaFilaPiezaVacia = filaVacia;
     nuevaColumnaPiezaVacia = columnaVacia + 1;
+    nuevaFilaPiezaVacia = filaVacia;
   }
 
   /* A continuación se chequea si la nueva posición es válida, si lo es, se intercambia. 
@@ -149,7 +153,7 @@ function moverEnDireccion(direccion) {
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
   //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
-  agregaUltimoMovimiento(direccion);
+        agregaUltimoMovimiento(direccion);
     }
 }
 
