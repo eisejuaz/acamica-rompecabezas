@@ -56,7 +56,23 @@ function agregaUltimoMovimiento(direccion) {
 
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora. 
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
-function chequearSiGano() {
+function chequearSiGano(grilla) {
+  var grillaGanadora = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+  var cuentaError = 0;
+  for (let i = 0; i < grilla.length; i++) {
+    for (let j = 0; j < grilla[i].length; j++) {
+      if (grilla[i][j] !== grillaGanadora[i][j]) {
+        cuentaError++;
+      }      
+    }
+  }
+  if (cuentaError === 0) {
+    mostrarCartelGanador();
+  }
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
