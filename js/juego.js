@@ -12,6 +12,10 @@ var grilla = [
     [7, 8, 9]
 ];
 
+// cantidad de mezlcas
+
+let shuffles = 65;
+
 /* Estas dos variables son para guardar la posición de la pieza vacía. 
 Esta posición comienza siendo la [2, 2]*/
 var filaVacia = 2;
@@ -62,17 +66,14 @@ function chequearSiGano() {
     [4, 5, 6],
     [7, 8, 9]
   ];
-  var cuentaError = 0;
   for (let i = 0; i < grilla.length; i++) {
     for (let j = 0; j < grilla[i].length; j++) {
       if (grilla[i][j] !== grillaGanadora[i][j]) {
-        cuentaError++;
+        return false;
       }      
     }
   }
-  if (cuentaError === 0) {
-    mostrarCartelGanador();
-  }
+  return true;
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
@@ -92,18 +93,15 @@ Se te ocurre cómo solucionar esto con una variable temporal?
 */
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
   //COMPLETAR
-    var valorAuxiliar = grilla[filaPos1][columnaPos1];
-    
-    grilla[filaPos1][columnaPos1] = grilla[filaPos2][columnaPos2];
-    grilla[filaPos2][columnaPos2] = valorAuxiliar;
+  var valorAuxiliar = grilla[filaPos1][columnaPos1];      
+  grilla[filaPos1][columnaPos1] = grilla[filaPos2][columnaPos2];
+  grilla[filaPos2][columnaPos2] = valorAuxiliar;
 }
 
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
   filaVacia = nuevaFila;
-  console.log('la fila vacia es ' + filaVacia);
   columnaVacia = nuevaColumna;
-  console.log('la columna vacia es ' + columnaVacia);
   //COMPLETAR
 }
 
@@ -292,7 +290,7 @@ y ejecutando la función para que se capturen las teclas que
 presiona el usuario */
 function iniciar() {
     mostrarInstrucciones(instrucciones);
-    mezclarPiezas(30);
+    mezclarPiezas(shuffles);
     capturarTeclas();
 }
 

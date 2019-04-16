@@ -49,33 +49,35 @@ li::before {
   opacity: 0.8;
   padding: 10px;
   color: #000;
-  width: 40%;
 }
 
 .col-60 {
   background: #E84A5F;
-  width: 60%;
 }
 
 .texto-centrado {text-align: center;}
 
-.piezas-tablero img {
-  width: 100%;
-  height: 100%;
-  display: block;  
-}
-
 #flecha {font-size: 2.5em;}
 
-#juego {width: 100%;}
+#juego {
+  width: 600px;
+  height: 600px;
+}
 
 #juego div {
   animation: fadein 2s;
-  width: 33%;
-  height: 33%;
+  width: 33.3%;
+  height: 33.3%;
   float: left;
   overflow: hidden;
+  margin: 0%;
+}
+
+#juego div img {
   border: #000 solid thin;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #resuelto {
